@@ -102,6 +102,10 @@ app.delete("/api/destinos/:id", (req, res) => {
   });
 });
 
+app.get('/', (req, res) => {
+  res.send('¡Mi API está funcionando correctamente!');
+});
+
 // Iniciar servidor
 app.listen(PORT, "0.0.0.0",() => {
   console.log("API activa en http://localhost:" + PORT);
