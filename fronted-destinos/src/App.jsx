@@ -3,6 +3,8 @@ import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import Footer from "./footer"
+import Navbar from "./components/navbar"
+import Hero from "./components/hero"
 
 function App() {
   const [destinos, setDestinos] = useState([]);
@@ -85,12 +87,11 @@ function App() {
   };
 
   return (
-    <div className="contenedor">
+    <div className="container">
+      
+      <Navbar />
 
-      <header>
-        <h1>🇨🇴 Explora Colombia</h1>
-        <p>Descubre los mejores destinos turísticos</p>
-      </header>
+      <Hero />
 
       <section className="formulario">
         <h2>Agregar nuevo destino</h2>
@@ -146,7 +147,7 @@ function App() {
               <h3>{destino.nombre}</h3>
               <p>{destino.departamento}</p>
               <p>{destino.descripcion}</p>
-              <img src={destino.imagen} class="img-thumbnail" alt="imagen" />
+              <img src={destino.imagen} class="img-thumbnail " alt="imagen" className="img_1"/>
             </div>
 
             <button
