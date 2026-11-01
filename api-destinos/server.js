@@ -60,7 +60,7 @@ app.get("/api/destinos/:id", (req, res) => {
 
 // POST: crear un destino
 app.post("/api/destinos", (req, res) => {
-  const { nombre, departamento, descripcion } = req.body;
+  const { nombre, departamento, descripcion, imagen } = req.body;
 
   if (!nombre || !departamento || !descripcion || !imagen){
     return res.status(400).json({
